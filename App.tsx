@@ -19,20 +19,23 @@ import {
 import {Provider} from 'react-redux';
 
 import {NavigationContainer} from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './components/Home';
 const Stack = createNativeStackNavigator();
 
-
 const App = memo(props => {
   return (
-    <Provider store={store}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name='Home' component={Home} options={{headerShown: false}}/>
-        </Stack.Navigator>
-      </NavigationContainer>
-    </Provider>
+    // <Provider store={store}>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // </Provider>
   );
 });
 
